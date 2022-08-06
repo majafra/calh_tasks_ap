@@ -9,4 +9,21 @@ from functools import wraps
 
 
 def require_typing(fn):
-    pass
+
+    @wraps(fn)
+    def wrapper(*args, **kwargs):
+        try:
+            if fn.__annotations__['a'] and fn.__annotations__['b'] and fn.__annotations__['return']:
+                result = fn(*args, **kwargs)
+                return result
+        except:
+            return f'add typings to function {fn.__name__}, please!'
+    return wrapper
+
+
+
+
+
+
+
+

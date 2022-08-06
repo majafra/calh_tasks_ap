@@ -48,3 +48,6 @@ class clientsTest(unittest.TestCase):
         self.assertEqual(next(iterator), "000000")
         self.assertEqual(next(iterator), "200000")
         self.assertEqual(next(iterator), "300000")
+
+
+   #     setattr(clients, clients.remove_client.__doc__, 'toto')

@@ -24,10 +24,10 @@ class RequireTypingTest(unittest.TestCase):
         @require_typing
         def add(a, b) -> float:
             return a + b
-        self.assertEqual(add(1, 2), f'Add typing to function add, please!')
+        self.assertEqual(add(1, 2), f'add typings to function add, please!')
 
     def test_non_typing_return(self):
         @require_typing
         def add(a: float, b: float):
             return a + b
-        self.assertEqual(add(1, 2), f'Add typing to function add, please!')
+        self.assertEqual(add(1, 2), f'add typings to function add, please!')

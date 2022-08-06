@@ -4,5 +4,21 @@
 # Zaimplementuj context manager za pomocą klasy
 
 class MyContextManager:
-    pass
+
+    def __init__(self):
+        print('__init')
+
+    def __enter__(self):
+        print('__enter__')
+        return self
+
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        print('__exit__')
+
+    def run(self):
+        print('run')
+
+if __name__ == '__main__':
+    with MyContextManager() as f:
+        f.run()
 

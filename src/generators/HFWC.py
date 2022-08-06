@@ -8,4 +8,11 @@ funkcji na przykład:
 
 
 def even_numbers(n):
-    pass
+    for i in range(n+1):
+        if i % 2 == 0 and i % 3 != 0:
+            yield i
+
+if __name__ == '__main__':
+    for n in even_numbers(15):
+        print(n)
+
